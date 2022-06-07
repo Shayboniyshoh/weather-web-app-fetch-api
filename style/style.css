@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+.weather_app {
+  min-height: 100vh;
+  background: url("../assets/images/day/cloudy.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.weather_app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 3rem;
+}
+.weather_disp {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.temp,
+.city_info,
+.weather_icon {
+  margin: 0 1.6rem;
+}
+.city_name {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 3.6rem;
+}
+.city_time,
+.city_date,
+.weather_condition {
+  font-size: 1.2rem;
+}
+.temp {
+  font-size: 7rem;
+  line-height: 5rem;
+  margin: 0;
+}
+.weather_icon .icon {
+  display: block;
+  margin: 0.5rem 0;
+  width: 50px;
+  height: 50px;
+}
+.weather_condition {
+  display: block;
+  text-align: center;
+}
+.search_panel {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(0.5rem);
+  -webkit-backdrop-filter: blur(0.5rem);
+  z-index: 9;
+  padding: 3rem 2rem;
+  overflow-y: scroll;
+}
+.search_panel::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.search_panel::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.search_panel::-webkit-scrollbar-thumb {
+  background-color: #111;
+  outline: 1px solid #333;
+}
+.search_panel form {
+  margin-bottom: 3rem;
+}
+.submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.8rem;
+  margin: 0;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: 0.3s ease-in-out;
+}
+.submit:hover {
+  background-color: #fff;
+  color: #000;
+}
+.search {
+  background: none;
+  border: none;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  padding: 0.4rem;
+  color: #fff;
+  width: 80%;
+  font-size: 1.2rem;
+}
+.search::placeholder {
+  color: #fff;
+}
+.search:focus {
+  outline: none;
+}
+.city_group,
+.weather_details {
+  padding-left: 1rem;
+  margin: 3rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.city_item,
+.details_item {
+  color: #eee;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+}
+.weather_details h4 {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.city_item {
+  display: block;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.city_item:hover {
+  color: #fff;
+}
+.weather_details .details_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .search_panel,
+  .container {
+    position: relative;
+    width: 100%;
+    top: initial;
+    align-items: center;
+    padding: 2.5rem;
+  }
+  .temp,
+  .city_info,
+  .weather_icon {
+    margin: 0 1.6rem;
+  }
+  .brand {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .temp,
+  .city_info,
+  .weather_icon {
+    margin: 0 1rem;
+  }
+  .city_name {
+    font-size: 2rem;
+  }
+  .city_time,
+  .city_date,
+  .weather_condition {
+    font-size: 1rem;
+  }
+  .temp {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  .search_panel,
+  .container {
+    padding: 1.6rem;
+  }
+  .submit {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+  .brand {
+    font-size: 1rem;
+    margin: 1rem 0;
+    align-self: flex-start;
+  }
+  .weather_icon .icon {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .temp,
+  .city_info,
+  .weather_icon {
+    margin: 0 0.5rem;
+  }
+  .city_name {
+    font-size: 1.2rem;
+  }
+  .temp {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .search_panel,
+  .container {
+    padding: 1rem;
+  }
+}

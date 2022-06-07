@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Weather Web App - Fetch Api</title>
+</head>
+
+<body>
+    <div class="weather_app">
+        <div class="container">
+            <h1 class="brand">The Weather App by Shayboniyshoh</h1>
+            <div class="weather_disp">
+                <h2 class="temp">16&#176</h2>
+                <div class="city_info">
+                    <h2 class="city_name">Tashkent</h2>
+                    <small>
+                        <span class="city_time">00:01</span>
+                        -
+                        <span class="city_date">Friday June 19</span>
+                    </small>
+                </div>
+                <div class="weather_icon">
+                    <img class="icon" src="./assets/icons/day/113.png" alt="icon">
+                    <span class="weather_condition">Sunny</span>
+                </div>
+            </div>
+        </div>
+        <div class="search_panel">
+            <form id="search_city">
+                <input class="search" type="text" placeholder="Search Location...">
+                <button class="submit" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <ul class="city_group">
+                <li class="city_item">Toshkent</li>
+                <li class="city_item">New York</li>
+                <li class="city_item">Istanbul</li>
+                <li class="city_item">Andijon</li>
+            </ul>
+            <ul class="weather_details">
+                <h4>Weather Details</h4>
+                <li class="details_item">
+                    <span>Cloudy</span>
+                    <span class="cloud">69 %</span>
+                </li>
+                <li class="details_item">
+                    <span>Humidity</span>
+                    <span class="humidity">64 %</span>
+                </li>
+                <li class="details_item">
+                    <span>Wind</span>
+                    <span class="wind">18 km/h</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
